@@ -3,72 +3,45 @@
 @{
     ViewBag.Title = "Details";
 }
-
-<h2>Details</h2>
-
-<div>
-    <h4>Review</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Category.Name)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Category.Name)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.ReviewTitle)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.ReviewTitle)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.AuthorUserName)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.AuthorUserName)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.ContentPreview)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.ContentPreview)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Rating)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Rating)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.ReviewDate)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.ReviewDate)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.TravelDate)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.TravelDate)
-        </dd>
-
-    </dl>
+<div class="row row-details-header">
+    <h1>Details</h1>
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.ReviewID }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
+<div class="container-fluid DetailsContainer">
+<div class="row row1">
+    <div class="col-md-2 col-sm-4">
+        <div class="row subrow">
+            @Html.DisplayFor(model => model.AuthorUserName)
+        </div>
+        <div class="row subrow">
+            <img class="avatar" src="https://picsum.photos/200/300/?random" alt="Card image" style="width:100%">
+        </div>
+    </div>
+    <div class="col-md-10 col-small-8 details-text">
+        <div class="row subrow2">
+            @Html.DisplayFor(model => model.ReviewTitle)
+        </div>
+        <div class="row subrow2">
+            @Html.DisplayFor(model => model.ContentPreview)
+        </div>
+        <div class="row subrow2">
+            <p>@Html.DisplayFor(model => model.Rating) out of 10</p>
+        </div>
+        <div class="row subrow2">
+            <p>Date Reviewed: @Html.DisplayFor(model => model.ReviewDate)</p>
+        </div>
+        <div class="row subrow2">
+            <p>Date Travelled: @Html.DisplayFor(model => model.TravelDate)</p>
+        </div>
+        <div class="row subrow2">
+            <p>
+                @Html.ActionLink("Edit", "Edit", new { id = Model.ReviewID }) |
+                @Html.ActionLink("Back to List", "Index")
+            </p>
+        </div>
+
+
+    </div>
+
+</div>
+    
+</div>

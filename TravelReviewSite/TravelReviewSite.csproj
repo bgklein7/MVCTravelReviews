@@ -160,12 +160,16 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\ImageRepository\pexels-photo-235985.jpeg" />
+    <Content Include="Content\ImageRepository\rsz_europe2c.jpg" />
+    <Content Include="Content\ImageRepository\rsz_north-america-map.jpg" />
     <Content Include="Content\ImageRepository\rsz_pexels-photo-411472.jpg" />
     <Content Include="Content\ImageRepository\rsz_pexels-photo-420233.jpg" />
     <Content Include="Content\ImageRepository\rsz_pexels-photo-449627.jpg" />
     <Content Include="Content\ImageRepository\rsz_pexels-photo-507410.jpg" />
     <Content Include="Content\ImageRepository\rsz_pexels-photo.jpg" />
     <Content Include="Content\ImageRepository\rsz_rugby-sports-players-competition-73763.jpg" />
+    <Content Include="Content\ImageRepository\rsz_the-united-states-of-america-map.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />

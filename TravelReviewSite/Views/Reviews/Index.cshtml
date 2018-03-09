@@ -4,66 +4,141 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<div class="container-fluid">
+    <div class="row row-reviews-one">
+        <div class="col-12">
+            <h2>Index</h2>
+            <p>@Html.ActionLink("Create New", "Create")</p>
+        </div>
+    </div>
+    <div class="row row-reviews-body">
+        <div class="col-md-4" id="Europe">
+            <h1>Europe</h1>
+            @foreach (var item in Model)
+            {
+                if (item.Category.Name == "Europe")
+                {
+            <div class="container-fluid ReviewContainer">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h3> @Html.DisplayFor(modelItem => item.ReviewTitle)</h3>
+                    </div>
+                    </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <p id="username"> by  @Html.DisplayFor(modelItem => item.AuthorUserName)</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <p>@Html.DisplayFor(modelItem => item.ContentPreview)</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <h4>@Html.DisplayFor(modelItem => item.Rating) out of 10!</h4>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <p>
+                            @Html.ActionLink("Edit", "Edit", new { id = item.ReviewID }) |
+                            @Html.ActionLink("Details", "Details", new { id = item.ReviewID }) |
+                            @Html.ActionLink("Delete", "Delete", new { id = item.ReviewID })
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <hr />
+ 
+                }
+            }
+        </div>
+        <div class="col-md-4" id="NorthAmerica">
+            <h1>North America</h1>
+            @foreach (var item in Model)
+    {
+        if (item.Category.Name == "Other North America")
+        {
+            <div class="container-fluid ReviewContainer">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h3> @Html.DisplayFor(modelItem => item.ReviewTitle)</h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <p id="username"> by  @Html.DisplayFor(modelItem => item.AuthorUserName)</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <p>@Html.DisplayFor(modelItem => item.ContentPreview)</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <h4>@Html.DisplayFor(modelItem => item.Rating) out of 10!</h4>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <p>
+                            @Html.ActionLink("Edit", "Edit", new { id = item.ReviewID }) |
+                            @Html.ActionLink("Details", "Details", new { id = item.ReviewID }) |
+                            @Html.ActionLink("Delete", "Delete", new { id = item.ReviewID })
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <hr />
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Category.Name)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ReviewTitle)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.AuthorUserName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ContentPreview)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Rating)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ReviewDate)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.TravelDate)
-        </th>
-        <th></th>
-    </tr>
-
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Category.Name)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ReviewTitle)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.AuthorUserName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ContentPreview)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Rating)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ReviewDate)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.TravelDate)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ReviewID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ReviewID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ReviewID })
-        </td>
-    </tr>
 }
+}
+        </div>
+        <div class="col-md-4" id="USA">
+            <h1>United States</h1>
+            @foreach (var item in Model)
+    {
+        if (item.Category.Name == "Within United States")
+        {
+            <div class="container-fluid ReviewContainer">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h3> @Html.DisplayFor(modelItem => item.ReviewTitle)</h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <p id="username"> by  @Html.DisplayFor(modelItem => item.AuthorUserName)</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <p>@Html.DisplayFor(modelItem => item.ContentPreview)</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <h4>@Html.DisplayFor(modelItem => item.Rating) out of 10!</h4>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <p>
+                            @Html.ActionLink("Edit", "Edit", new { id = item.ReviewID }) |
+                            @Html.ActionLink("Details", "Details", new { id = item.ReviewID }) |
+                            @Html.ActionLink("Delete", "Delete", new { id = item.ReviewID })
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <hr />
 
-</table>
+}
+}
+        </div>
+
+
+    </div>
+  </div>
