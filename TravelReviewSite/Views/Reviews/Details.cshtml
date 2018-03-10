@@ -4,33 +4,33 @@
     ViewBag.Title = "Details";
 }
 <div class="row row-details-header">
-    <h1>Details</h1>
+    <h1>Full Review</h1>
 </div>
 <div class="container-fluid DetailsContainer">
 <div class="row row1">
-    <div class="col-md-2 col-sm-4">
+    <div class="col-md-2 col-sm-12">
         <div class="row subrow">
-            @Html.DisplayFor(model => model.AuthorUserName)
+            <h3 id="username-detail">@Html.DisplayFor(model => model.AuthorUserName)</h3>
         </div>
         <div class="row subrow">
             <img class="avatar" src="https://picsum.photos/200/300/?random" alt="Card image" style="width:100%">
         </div>
     </div>
-    <div class="col-md-10 col-small-8 details-text">
+    <div class="col-md-10 col-small-12 details-text">
         <div class="row subrow2">
-            @Html.DisplayFor(model => model.ReviewTitle)
+            <h3 id="detail-review-title">@Html.DisplayFor(model => model.ReviewTitle)</h3>
         </div>
         <div class="row subrow2">
-            @Html.DisplayFor(model => model.ContentPreview)
+            <p><b>Description:</b> @Html.DisplayFor(model => model.ContentPreview)</p>
         </div>
         <div class="row subrow2">
-            <p>@Html.DisplayFor(model => model.Rating) out of 10</p>
+            <p><b>Rating:</b> @Html.DisplayFor(model => model.Rating) out of 10</p>
         </div>
         <div class="row subrow2">
-            <p>Date Reviewed: @Html.DisplayFor(model => model.ReviewDate)</p>
+            <p><b>Date Reviewed:</b> @Html.DisplayFor(model => model.ReviewDate)</p>
         </div>
         <div class="row subrow2">
-            <p>Date Travelled: @Html.DisplayFor(model => model.TravelDate)</p>
+            <p><b>Date Travelled:</b> @Html.DisplayFor(model => model.TravelDate)</p>
         </div>
         <div class="row subrow2">
             <p>

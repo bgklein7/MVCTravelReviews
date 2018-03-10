@@ -17,10 +17,10 @@ namespace TravelReviewSite.Models
         [Display(Name ="Rating (out of 10)")]
         public int Rating { get; set; }
         [Display(Name ="Date Reviewed")]
-        [DisplayFormat(DataFormatString="{0:yyyy/MM/dd}")]
+        [DisplayFormat(DataFormatString="{0:MM/dd/yyyy}")]
         public DateTime ReviewDate { get; set; }
         [Display(Name ="Date of Travel")]
-        [DisplayFormat(DataFormatString ="{0:yyyy/MM}")]
+        [DisplayFormat(DataFormatString ="{0:MM/yyyy}")]
         public DateTime TravelDate { get; set; }
 
         //Foreign Keys and Navigation Properties

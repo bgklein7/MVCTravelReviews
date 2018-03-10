@@ -23,6 +23,22 @@ select,
 textarea {
     max-width: 280px;
 }
+.navbar.navbar-inverse {
+    background-image: url('ImageRepository/rsz_01-60-0007-lg-dcb-02.jpg');
+    background-size: cover;
+}
+a.navbar-brand{
+    font-family: 'Rock Salt', cursive;
+}
+.body-content hr{
+    border-top-color: transparent!important;
+}
+
+/*Home page style*/
+.rowintro h1{
+    font-family: 'Rock Salt', cursive;
+    color: white!important;
+}
 
 /*Home page carousel*/
 @keyframes carouselAnim {
@@ -193,11 +209,12 @@ textarea {
 }
 /*Reviews Index*/
 #Europe {
-    background-image: url('ImageRepository/rsz_europe2c.jpg');
+    background-image: url('ImageRepository/rsz_europe-map.jpg');
     background-size: cover;
     background-repeat: repeat;
     height: 100%;
     text-align: center;
+    border: 2px solid black;
 
 }
 #NorthAmerica {
@@ -206,6 +223,9 @@ textarea {
     background-repeat: no-repeat;
     height: 100%;
     text-align: center;
+    border-top: 1px solid black;
+    border-bottom: 2px solid black;
+    
 
 }
 #USA {
@@ -214,10 +234,21 @@ textarea {
     background-repeat: no-repeat;
     height: 100%;
     text-align: center;
+    border-top: 1px solid black;
+    border-bottom: 2px solid black;
 
 }
 .row-reviews-one{
     color: white;
+}
+.row-reviews-one a{
+    color: white!important;
+}
+.row-reviews-one a:hover{
+    text-decoration-line: none;
+    color: white!important;
+    font-weight: bolder;
+    font-family: 'Rock Salt', cursive;
 }
 
 .ReviewContainer {
@@ -239,17 +270,38 @@ textarea {
 .ReviewContainer h4{
     text-align: center;
 }
+.ReviewContainer a{
+    color: green!important;
+}
+.ReviewContainer a:hover{
+    font-weight: bolder;
+    font-family: 'Rock Salt', cursive;
+    text-decoration-line: none;
+}
+#Europe hr{
+    border-top-color: transparent;
+}
+#NorthAmerica hr{
+    border-top-color: transparent;
+}
+#USA hr{
+    border-top-color: transparent;
+}
 #username{
     font-size: 18px;
     font-style: oblique;
     text-align: left;
     margin-bottom: 0px;
 }
+.row-reviews-body h1{
+    font-family: 'Rock Salt', cursive;
+}
 
 /*details page*/
 .container-fluid.DetailsContainer {
     background-color: white;
     opacity: 0.75;
+    border-radius:  25px;
 }
 
 .row-details-header{
@@ -258,4 +310,30 @@ textarea {
 .subrow2{
     margin-left: 10px;
     margin-top: 10px;
+}
+.subrow2 a{
+    color: green!important;
+}
+.subrow2 a:hover{
+    font-weight: bolder;
+    text-decoration-line: none;
+    font-family: 'Rock Salt', cursive;
+}
+.avatar{
+    border-radius: 50%;
+    height: 100px;
+    width: 100px!important;
+    margin-top: 10px;
+    margin-left: 40px;
+    border: 3px solid black;
+}
+h3#username-detail {
+    margin-top: 10px!important;
+    margin-left: 30px!important;
+}
+.details-text{
+    border-left: 5px dotted darkgrey;
+}
+h3#detail-review-title{
+    margin-top: 0px;
 }
